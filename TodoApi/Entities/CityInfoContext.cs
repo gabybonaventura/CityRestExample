@@ -8,10 +8,7 @@ namespace TodoApi.Entities
         public CityInfoContext(DbContextOptions<CityInfoContext> options)
             :base(options)
         {
-            if (Database.EnsureCreated())
-                System.Console.WriteLine("database true");
-            else
-                System.Console.WriteLine("database false");
+            Database.Migrate();
 
         }
 
